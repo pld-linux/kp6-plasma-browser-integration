@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.2.4
+%define		kdeplasmaver	6.2.5
 %define		qtver		5.15.2
 %define		kpname		plasma-browser-integration
 
 Summary:	KDE Plasma Browser Integration
 Name:		kp6-%{kpname}
-Version:	6.2.4
+Version:	6.2.5
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	c5d0db08dfa4515a0ccef2f37bb58bb3
+# Source0-md5:	67c4ef291f1728261e6660c915d2a1d6
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel
