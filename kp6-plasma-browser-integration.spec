@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.2.5
+%define		kdeplasmaver	6.3.0
 %define		qtver		5.15.2
 %define		kpname		plasma-browser-integration
 
 Summary:	KDE Plasma Browser Integration
 Name:		kp6-%{kpname}
-Version:	6.2.5
+Version:	6.3.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	67c4ef291f1728261e6660c915d2a1d6
+# Source0-md5:	87c7dda3ea99807de32c9c0936628711
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel
@@ -21,7 +21,6 @@ BuildRequires:	Qt6Widgets-devel
 BuildRequires:	cmake >= 3.16.0
 BuildRequires:	gettext-devel
 BuildRequires:	kf6-extra-cmake-modules
-BuildRequires:	kp6-plasma-activities-devel
 BuildRequires:	kf6-kauth-devel
 BuildRequires:	kf6-kcodecs-devel
 BuildRequires:	kf6-kcompletion-devel
@@ -43,6 +42,7 @@ BuildRequires:	kf6-kwindowsystem-devel
 BuildRequires:	kf6-kxmlgui-devel
 BuildRequires:	kf6-purpose-devel
 BuildRequires:	kf6-solid-devel
+BuildRequires:	kp6-plasma-activities-devel
 BuildRequires:	kp6-plasma-workspace-devel >= %{kdeplasmaver}
 BuildRequires:	ninja
 BuildRequires:	rpmbuild(macros) >= 1.164
@@ -92,6 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_prefix}/lib/mozilla/native-messaging-hosts
 %{_prefix}/lib/mozilla/native-messaging-hosts/org.kde.plasma.browser_integration.json
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kded/browserintegrationreminder.so
+%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kded/browserintegrationflatpakintegrator.so
 %dir %{_sysconfdir}/opt/edge
 %dir %{_sysconfdir}/opt/edge/native-messaging-hosts
 %{_sysconfdir}/opt/edge/native-messaging-hosts/org.kde.plasma.browser_integration.json
