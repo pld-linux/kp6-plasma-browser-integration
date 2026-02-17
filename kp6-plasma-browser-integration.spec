@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.5.5
+%define		kdeplasmaver	6.6.0
 %define		qtver		5.15.2
 %define		kpname		plasma-browser-integration
 
 Summary:	KDE Plasma Browser Integration
 Name:		kp6-%{kpname}
-Version:	6.5.5
-Release:	2
+Version:	6.6.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	f09c4f0e8fbbd0012d46bf5c9420ec7a
+# Source0-md5:	13d1600e30447016e9eb8b8ae888c25a
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6DBus-devel
@@ -102,6 +102,9 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_prefix}/lib/mozilla
 %dir %{_prefix}/lib/mozilla/native-messaging-hosts
 %{_prefix}/lib/mozilla/native-messaging-hosts/org.kde.plasma.browser_integration.json
+%dir %{_prefix}/lib/waterfox
+%dir %{_prefix}/lib/waterfox/native-messaging-hosts
+%{_prefix}/lib/waterfox/native-messaging-hosts/org.kde.plasma.browser_integration.json
 %{_libdir}/qt6/plugins/kf6/kded/browserintegrationreminder.so
 %{_libdir}/qt6/plugins/kf6/kded/browserintegrationflatpakintegrator.so
 %dir %{_sysconfdir}/opt/edge
