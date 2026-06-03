@@ -57,6 +57,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 KDE Plasma Browser Integration.
 
+%description -l pl.UTF-8
+Integracja Plazmy z przeglądarkami www.
+
 %prep
 %setup -q -n %{kpname}-%{version}
 
